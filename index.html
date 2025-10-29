@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Your Custom Railing - Imperio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gray-50">
+
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+            <!-- Header -->
+            <div class="text-center mb-8">
+                <div class="inline-block bg-gray-200 text-gray-600 px-4 py-1 rounded-full text-sm mb-4">
+                    BETA VERSION
+                </div>
+                <h1 class="text-3xl font-bold text-gray-800 mb-2">Design Your Custom Railing</h1>
+                <p class="text-gray-600">Customize every aspect of your railing system to match your space perfectly</p>
+            </div>
+
+            <!-- Select Finish -->
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-center mb-4">Select Finish</h2>
+                <div class="flex justify-center space-x-4">
+                    <button class="finish-btn w-12 h-12 rounded border-2 border-blue-500 bg-gray-300" data-finish="silver" data-active="true">
+                        <span class="sr-only">Silver</span>
+                    </button>
+                    <button class="finish-btn w-12 h-12 rounded border-2 border-transparent bg-yellow-700 hover:border-blue-500" data-finish="bronze">
+                        <span class="sr-only">Bronze</span>
+                    </button>
+                    <button class="finish-btn w-12 h-12 rounded border-2 border-transparent bg-black hover:border-blue-500" data-finish="black">
+                        <span class="sr-only">Black</span>
+                    </button>
+                    <button class="finish-btn w-12 h-12 rounded border-2 border-transparent bg-orange-800 hover:border-blue-500" data-finish="copper">
+                        <span class="sr-only">Copper</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Select Base -->
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-center mb-4">Select Base</h2>
+                <div class="relative">
+                    <button class="carousel-btn prev absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100" data-carousel="base">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <div class="carousel-container overflow-hidden">
+                        <div class="carousel-track flex transition-transform duration-300" id="baseCarousel">
+                            <!-- Ace Base -->
+                            <div class="carousel-item flex-shrink-0 w-1/4 px-2">
+                                <div class="base-card border-2 border-blue-500 rounded-lg p-4 cursor-pointer bg-blue-50 hover:shadow-lg transition" data-base="ace" data-active="true">
+                                    <div class="relative">
+                                        <button class="info-btn absolute top-0 right-0 text-blue-500 hover:text-blue-700" data-modal="ace">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                                        </button>
+                                        <img src="assets/images/bases/ace-silver.png" alt="Ace Base" class="base-image w-full h-32 object-contain mb-2">
+                                    </div>
+                                    <p class="text-center font-semibold">Ace</p>
+                                    <div class="selected-badge mt-2 text-center">
+                                        <span class="inline-block bg-blue-500 text-white text-xs px-3 py-1 rounded-full">Selected</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Pro Base -->
+                            <div class="carousel-item flex-shrink-0 w-1/4 px-2">
+                                <div class="base-card border-2 border-transparent rounded-lg p-4 cursor-pointer hover:border-blue-500 hover:shadow-lg transition" data-base="pro">
+                                    <div class="relative">
+                                        <button class="info-btn absolute top-0 right-0 text-blue-500 hover:text-blue-700" data-modal="pro">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                                        </button>
+                                        <img src="assets/images/bases/pro-silver.png" alt="Pro Base" class="base-image w-full h-32 object-contain mb-2">
+                                    </div>
+                                    <p class="text-center font-semibold">Pro</p>
+                                </div>
+                            </div>
+                            <!-- Smart Base -->
+                            <div class="carousel-item flex-shrink-0 w-1/4 px-2">
+                                <div class="base-card border-2 border-transparent rounded-lg p-4 cursor-pointer hover:border-blue-500 hover:shadow-lg transition" data-base="smart">
+                                    <div class="relative">
+                                        <button class="info-btn absolute top-0 right-0 text-blue-500 hover:text-blue-700" data-modal="smart">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                                        </button>
+                                        <img src="assets/images/bases/smart-silver.png" alt="Smart Base" class="base-image w-full h-32 object-contain mb-2">
+                                    </div>
+                                    <p class="text-center font-semibold">Smart</p>
+                                </div>
+                            </div>
+                            <!-- Mini Base -->
+                            <div class="carousel-item flex-shrink-0 w-1/4 px-2">
+                                <div class="base-card border-2 border-transparent rounded-lg p-4 cursor-pointer hover:border-blue-500 hover:shadow-lg transition" data-base="mini">
+                                    <div class="relative">
+                                        <button class="info-btn absolute top-0 right-0 text-blue-500 hover:text-blue-700" data-modal="mini">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                                        </button>
+                                        <img src="assets/images/bases/mini-silver.png" alt="Mini Base" class="base-image w-full h-32 object-contain mb-2">
+                                    </div>
+                                    <p class="text-center font-semibold">Mini</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100" data-carousel="base">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Select Handrail -->
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-center mb-4">Select Handrail</h2>
+                <div class="relative">
+                    <button class="carousel-btn prev absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100" data-carousel="handrail">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <div class="carousel-container overflow-hidden">
+                        <div class="carousel-track flex transition-transform duration-300" id="handrailCarousel">
+                            <!-- Sleek -->
+                            <div class="carousel-item flex-shrink-0 w-1/4 px-2">
+                                <div class="handrail-card border-2 border-blue-500 rounded-lg p-4 cursor-pointer bg-blue-50 hover:shadow-lg transition" data-handrail="sleek" data-active="true">
+                                    <div class="relative">
+                                        <button class="info-btn absolute top-0 right-0 text-blue-500 hover:text-blue-700">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                                        </button>
+                                        <img src="assets/images/handrails/sleek-silver.png" alt="Sleek Handrail" class="handrail-image w-full h-24 object-contain mb-2">
+                                    </div>
+                                    <p class="text-center font-semibold">Sleek</p>
+                                    <div class="selected-badge mt-2 text-center">
+                                        <span class="inline-block bg-blue-500 text-white text-xs px-3 py-1 rounded-full">Selected</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slim -->
+                            <div class="carousel-item flex-shrink-0 w-1/4 px-2">
+                                <div class="handrail-card border-2 border-transparent rounded-lg p-4 cursor-pointer hover:border-blue-500 hover:shadow-lg transition" data-handrail="slim">
+                                    <div class="relative">
+                                        <button class="info-btn absolute top-0 right-0 text-blue-500 hover:text-blue-700">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                                        </button>
+                                        <img src="assets/images/handrails/slim-silver.png" alt="Slim Handrail" class="handrail-image w-full h-24 object-contain mb-2">
+                                    </div>
+                                    <p class="text-center font-semibold">Slim</p>
+                                </div>
+                            </div>
+                            <!-- Square20 -->
+                            <div class="carousel-item flex-shrink-0 w-1/4 px-2">
+                                <div class="handrail-card border-2 border-transparent rounded-lg p-4 cursor-pointer hover:border-blue-500 hover:shadow-lg transition" data-handrail="square20">
+                                    <div class="relative">
+                                        <button class="info-btn absolute top-0 right-0 text-blue-500 hover:text-blue-700">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                                        </button>
+                                        <img src="assets/images/handrails/square20-silver.png" alt="Square20 Handrail" class="handrail-image w-full h-24 object-contain mb-2">
+                                    </div>
+                                    <p class="text-center font-semibold">Square20</p>
+                                </div>
+                            </div>
+                            <!-- Square30 -->
+                            <div class="carousel-item flex-shrink-0 w-1/4 px-2">
+                                <div class="handrail-card border-2 border-transparent rounded-lg p-4 cursor-pointer hover:border-blue-500 hover:shadow-lg transition" data-handrail="square30">
+                                    <div class="relative">
+                                        <button class="info-btn absolute top-0 right-0 text-blue-500 hover:text-blue-700">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                                        </button>
+                                        <img src="assets/images/handrails/square30-silver.png" alt="Square30 Handrail" class="handrail-image w-full h-24 object-contain mb-2">
+                                    </div>
+                                    <p class="text-center font-semibold">Square30</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100" data-carousel="handrail">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Additional Options -->
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-center mb-6">Additional Options</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Left Column -->
+                    <div class="space-y-4">
+                        <!-- Glass Type -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2 flex items-center">
+                                Glass Type
+                                <button class="ml-2 text-blue-500 hover:text-blue-700">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </button>
+                            </label>
+                            <select id="glassType" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="clear">12mm Clear Toughened Glass</option>
+                                <option value="frosted">12mm Frosted Toughened Glass</option>
+                                <option value="tinted">12mm Tinted Toughened Glass</option>
+                            </select>
+                        </div>
+
+                        <!-- I am -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">I am</label>
+                            <select id="userType" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="looking">Looking for Myself</option>
+                                <option value="architect">Architect</option>
+                                <option value="contractor">Contractor</option>
+                                <option value="designer">Interior Designer</option>
+                            </select>
+                        </div>
+
+                        <!-- Installation Required -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Installation Required</label>
+                            <div class="flex space-x-4">
+                                <label class="flex items-center">
+                                    <input type="radio" name="installation" value="yes" class="w-4 h-4 text-blue-500 focus:ring-blue-500">
+                                    <span class="ml-2">Yes</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="radio" name="installation" value="no" checked class="w-4 h-4 text-blue-500 focus:ring-blue-500">
+                                    <span class="ml-2">No</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="space-y-4">
+                        <!-- Installation Pincode -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2 flex items-center">
+                                Installation Pincode
+                                <button class="ml-2 text-blue-500 hover:text-blue-700">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </button>
+                            </label>
+                            <input type="text" id="pincode" placeholder="Enter your pincode" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+
+                        <!-- Project Timeline -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2 flex items-center">
+                                Project Timeline
+                                <button class="ml-2 text-blue-500 hover:text-blue-700">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </button>
+                            </label>
+                            <select id="timeline" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="urgent">Urgent - Within 30 Days</option>
+                                <option value="1-3">1-3 Months</option>
+                                <option value="3-6">3-6 Months</option>
+                                <option value="6+">6+ Months</option>
+                            </select>
+                        </div>
+
+                        <!-- Project Name -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2 flex items-center">
+                                Project name
+                                <button class="ml-2 text-blue-500 hover:text-blue-700">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </button>
+                            </label>
+                            <input type="text" id="projectName" placeholder="Enter your project name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Glass Height -->
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-gray-700 mb-4">Glass Height (from finish floor level)</h2>
+                <div class="flex flex-col md:flex-row gap-8">
+                    <!-- Height Options -->
+                    <div class="flex-1 space-y-3">
+                        <label class="flex items-center p-3 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition">
+                            <input type="radio" name="height" value="4" class="w-5 h-5 text-blue-500" data-height="4">
+                            <span class="ml-3 text-gray-700">4 Feet</span>
+                        </label>
+                        <label class="flex items-center p-3 border-2 border-blue-500 bg-blue-50 rounded-lg cursor-pointer">
+                            <input type="radio" name="height" value="3.5" checked class="w-5 h-5 text-blue-500" data-height="3.5">
+                            <span class="ml-3 text-gray-700 font-semibold">3.5 Feet (Standard)</span>
+                        </label>
+                        <label class="flex items-center p-3 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition">
+                            <input type="radio" name="height" value="3" class="w-5 h-5 text-blue-500" data-height="3">
+                            <span class="ml-3 text-gray-700">3 Feet</span>
+                        </label>
+                        <label class="flex items-center p-3 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition">
+                            <input type="radio" name="height" value="2.5" class="w-5 h-5 text-blue-500" data-height="2.5">
+                            <span class="ml-3 text-gray-700">2.5 Feet</span>
+                        </label>
+                        <label class="flex items-center p-3 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition">
+                            <input type="radio" name="height" value="2" class="w-5 h-5 text-blue-500" data-height="2">
+                            <span class="ml-3 text-gray-700">2 Feet</span>
+                        </label>
+                        <p class="text-center text-blue-500 font-semibold pt-2" id="selectedHeight">3.5 Feet</p>
+                    </div>
+
+                    <!-- Height Visualization -->
+                    <div class="flex-1 flex items-end justify-center relative" id="heightVisualization">
+                        <img src="assets/images/heights/silhouette.png" alt="Person silhouette" class="h-64 object-contain">
+                        <div class="absolute left-1/2 -translate-x-1/2 flex flex-col items-center" id="heightIndicator" style="bottom: 140px;">
+                            <div class="h-32 w-0.5 bg-gray-800"></div>
+                            <div class="flex items-center mt-2">
+                                <div class="h-0.5 w-4 bg-gray-800"></div>
+                                <span class="mx-2 text-sm font-semibold bg-white px-2 py-1 rounded border border-gray-800">3.5 Feet</span>
+                                <div class="h-0.5 w-4 bg-gray-800"></div>
+                            </div>
+                        </div>
+                        <img id="heightSampleImage" src="assets/images/heights/3.5-feet.png" alt="Height sample" class="absolute bottom-0 left-0 h-40 object-contain opacity-75">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Your Selection Summary -->
+            <section class="mb-8">
+                <h2 class="text-xl font-semibold text-center mb-6">Your Selection</h2>
+                <div class="bg-blue-50 rounded-lg p-6">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+                        <div>
+                            <p class="text-xs text-gray-600 uppercase mb-1">Finish</p>
+                            <p class="font-semibold capitalize" id="summaryFinish">Silver</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-600 uppercase mb-1">Base</p>
+                            <p class="font-semibold capitalize" id="summaryBase">Ace</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-600 uppercase mb-1">Handrail</p>
+                            <p class="font-semibold capitalize" id="summaryHandrail">Sleek</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-600 uppercase mb-1">Glass</p>
+                            <p class="font-semibold" id="summaryGlass">12mm Clear Toughened Glass</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div>
+                            <p class="text-xs text-gray-600 uppercase mb-1">Height</p>
+                            <p class="font-semibold" id="summaryHeight">3.5 ft</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-600 uppercase mb-1">I am</p>
+                            <p class="font-semibold" id="summaryUserType">Looking for Myself</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-600 uppercase mb-1">Timeline</p>
+                            <p class="font-semibold" id="summaryTimeline">Urgent - Within 30 Days</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-600 uppercase mb-1">Installation</p>
+                            <p class="font-semibold" id="summaryInstallation">No</p>
+                        </div>
+                    </div>
+                    <div class="mt-4" id="summaryProjectName" style="display: none;">
+                        <p class="text-xs text-gray-600 uppercase mb-1">Project Name</p>
+                        <p class="font-semibold" id="summaryProjectNameValue"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button id="continueBtn" class="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 transition">
+                    Continue
+                </button>
+                <button id="viewQuoteBtn" class="bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 transition">
+                    View Existing Quotation
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal for Base Info -->
+    <div id="baseModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto relative">
+            <button class="modal-close absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="p-8">
+                <h3 class="text-2xl font-bold mb-4" id="modalTitle">Base Type</h3>
+                <img id="modalImage" src="" alt="Base sample" class="w-full h-64 object-cover rounded-lg mb-4">
+                <p class="text-gray-700 mb-2" id="modalDescription"></p>
+                <p class="text-gray-600" id="modalSuitable"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quotation Form Modal -->
+    <div id="quotationModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-md w-full relative">
+            <button class="modal-close absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="p-8">
+                <button id="backToForm" class="mb-4 text-gray-600 hover:text-gray-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <h2 class="text-2xl font-bold mb-6 text-center">Complete Your Quotation</h2>
+                
+                <form id="quotationForm" class="space-y-4">
+                    <!-- Name -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            Name <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" id="userName" required class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your full name">
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            Phone Number <span class="text-red-500">*</span>
+                        </label>
+                        <div class="flex gap-2">
+                            <div class="flex items-center border border-gray-300 rounded-lg px-3 bg-gray-50">
+                                <span class="text-2xl">🇮🇳</span>
+                                <span class="ml-2 text-gray-700">+91</span>
+                            </div>
+                            <input type="tel" id="userPhone" required maxlength="10" pattern="[0-9]{10}" class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter phone number">
+                            <button type="button" id="sendOtpBtn" class="bg-blue-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-600 transition whitespace-nowrap">
+                                Send OTP
+                            </button>
+                        </div>
+                        <p id="phoneError" class="text-red-500 text-sm mt-1 hidden">Please enter a valid 10-digit phone number</p>
+                    </div>
+
+                    <!-- OTP Field (Hidden initially) -->
+                    <div id="otpField" class="hidden">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            Enter OTP <span class="text-red-500">*</span>
+                        </label>
+                        <input type="text" id="userOtp" maxlength="6" pattern="[0-9]{6}" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter 6-digit OTP">
+                        <p id="otpError" class="text-red-500 text-sm mt-1 hidden">Invalid OTP</p>
+                        <p class="text-sm text-gray-600 mt-1">OTP sent to your phone number</p>
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            Email <span class="text-red-500">*</span>
+                        </label>
+                        <div class="relative">
+                            <input type="email" id="userEmail" required class="w-full border border-gray-300 rounded-lg px-4 py-2 pr-10 focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Enter your email address">
+                            <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Quantity -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+                            Quantity (Running Feet) <span class="text-red-500">*</span>
+                        </label>
+                        <input type="number" id="quantity" required min="1" value="50" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" id="submitQuoteBtn" class="w-full bg-green-400 text-white py-3 rounded-lg font-semibold hover:bg-green-500 transition">
+                        Get a quote
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-md w-full p-8 text-center">
+            <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Quote Submitted Successfully!</h3>
+            <p class="text-gray-600 mb-6">We'll contact you shortly with your custom railing quotation.</p>
+            <button id="downloadPdfBtn" class="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition mb-3">
+                Download Your Selection (PDF)
+            </button>
+            <button id="closeSuccessBtn" class="w-full bg-gray-200 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-300 transition">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+        <div class="bg-white rounded-lg p-8">
+            <div class="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-500 mx-auto"></div>
+            <p class="mt-4 text-gray-700 font-semibold">Processing...</p>
+        </div>
+    </div>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+                        
